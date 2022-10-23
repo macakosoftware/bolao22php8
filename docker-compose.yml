@@ -1,0 +1,66 @@
+version: '3'
+services:
+
+  #PHP Service
+  bolao22:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: macakosoftware/bolao22php8
+    container_name: bolao22_php8
+    restart: unless-stopped
+    tty: true
+    environment:
+      SERVICE_NAME: bolao22
+      SERVICE_TAGS: dev
+    working_dir: /var/www
+    networks:
+      - app-network
+    volumes:
+       - ./:/var/www
+       - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+
+  #Nginx Service
+  webserver:
+    image: nginx:alpine
+    container_name: webserver_php8
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - app-network
+    volumes:
+      - ./:/var/www
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+
+  #MySQL Service
+  db:
+    image: mysql:5.7.22
+    container_name: db_php8
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: bolao22
+      MYSQL_ROOT_PASSWORD: teste123
+      MYSQL_USER: bolao22
+      MYSQL_PASSWORD: bolao22pass 
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    volumes:
+      - dbdata_bolao22:/var/lib/mysql
+    networks:
+      - app-network
+    
+#Volumes
+volumes:
+  dbdata_bolao22:
+    driver: local
+
+#Docker Networks
+networks:
+  app-network:
+    driver: bridge
