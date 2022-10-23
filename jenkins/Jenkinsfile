@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('build'){
             steps{
-                checkout scm                
+                checkout scm   
+                sh 'composer install'             
             }
         }
         stage('Test') {
