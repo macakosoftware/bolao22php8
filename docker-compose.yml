@@ -50,8 +50,10 @@ services:
       MYSQL_PASSWORD: bolao22pass 
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
+    command: --init-file /data/application/init.sql
     volumes:
       - dbdata_bolao22:/var/lib/mysql
+      - ./mysql/init.sql:/data/application/init.sql
     networks:
       - app-network
     
