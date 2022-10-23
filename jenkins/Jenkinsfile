@@ -1,9 +1,15 @@
 pipeline {
-    agent { dockerfile true }
+    agent { dockerfile true }    
     stages {
+        stage('build'){
+            steps{
+                checkout scm                
+            }
+        }
         stage('Test') {
             steps {
-                sh 'php --version'                
+                sh 'php --version'      
+                sh './vendor/bin/phpstan analyse --memory-limit=2G'          
             }
         }
     }
