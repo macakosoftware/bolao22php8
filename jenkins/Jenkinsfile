@@ -9,6 +9,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'php --version'      
+                sh 'ls -ltr'
                 sh './vendor/bin/phpstan analyse --memory-limit=2G'          
             }
         }
