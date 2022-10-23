@@ -1,17 +1,20 @@
 pipeline {
     agent { dockerfile true }    
     stages {
-        stage('build'){
+        stage('Construção'){
             steps{
                 checkout scm   
                 sh 'composer install'             
             }
         }
-        stage('Test') {
-            steps {
-                sh 'php --version'      
-                sh 'ls -ltr'
+        stage('Checkar Sintaxe') {
+            steps {                
                 sh './vendor/bin/phpstan analyse --memory-limit=2G'          
+            }
+        }
+        stage('Testes Unitários') {
+            steps {                
+                sh 'php artisan test --coverage'          
             }
         }
     }
