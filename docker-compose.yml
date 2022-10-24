@@ -19,6 +19,8 @@ services:
     volumes:
        - ./:/var/www
        - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    depends_on:          
+      - "db"
 
   #Nginx Service
   webserver:
@@ -56,7 +58,7 @@ services:
       - ./mysql/init.sql:/data/application/init.sql
     networks:
       - app-network
-    
+        
 #Volumes
 volumes:
   dbdata_bolao22:
