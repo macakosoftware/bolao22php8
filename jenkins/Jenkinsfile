@@ -4,8 +4,7 @@ pipeline {
         stage('Construção'){
             steps{
                 checkout scm   
-                sh 'composer install'             
-                sh 'docker ps'
+                sh 'composer install'                             
             }
         }
         
