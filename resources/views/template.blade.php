@@ -108,7 +108,7 @@
 											</div>
 
 											<div class="progress progress-mini">
-												<div style="width: {{$tarefas->pc_pgto}}%"
+												<div style="width: {{$tarefas->pc_pagto}}%"
 													class="progress-bar"></div>
 											</div>
 									</a></li> @endif @if ($tarefas->id_aposta_pendente)
