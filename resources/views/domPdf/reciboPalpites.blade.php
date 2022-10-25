@@ -91,22 +91,22 @@ TD{font-family: helvetica; font-size: 8pt;}
    	@endif
    	</td>
    	<td>
-   	{{number_format($reg_aposta['pontuacao']->qt_pontos_resultado,2,',','')}}
+   	{{number_format(float($reg_aposta['pontuacao']->qt_pontos_resultado),2,',','')}}
    	</td>
    	<td>
-   	{{number_format($reg_aposta['pontuacao']->qt_pontos_placar_cheio,2,',','')}}
+   	{{number_format(float($reg_aposta['pontuacao']->qt_pontos_placar_cheio),2,',','')}}
    	</td>
    	<td>
-   	{{number_format($reg_aposta['pontuacao']->qt_pontos_placar_parcial1,2,',','')}}
+   	{{number_format(float($reg_aposta['pontuacao']->qt_pontos_placar_parcial1),2,',','')}}
    	</td>   	
    	<td>
-   	{{number_format($reg_aposta['pontuacao']->qt_pontos_placar_parcial2,2,',','')}}
+   	{{number_format(float($reg_aposta['pontuacao']->qt_pontos_placar_parcial2),2,',','')}}
    	</td>
    	<td>
-   	{{number_format($reg_aposta['pontuacao']->qt_pontos_bonus,2,',','')}}
+   	{{number_format(float($reg_aposta['pontuacao']->qt_pontos_bonus),2,',','')}}
    	</td>
    	<td>
-   	{{number_format($reg_aposta['pontuacao']->qt_pontos_maximo,2,',','')}}
+   	{{number_format(float($reg_aposta['pontuacao']->qt_pontos_maximo),2,',','')}}
    	</td>
    </tr>   
    @endforeach

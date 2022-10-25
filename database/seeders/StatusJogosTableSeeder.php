@@ -21,5 +21,13 @@ class StatusJogosTableSeeder extends Seeder
             'id' => 2,
             'ds_status' => 'Finalizado'
         ]);
+        DB::table('status_jogos')->insert([
+            'id' => 3,
+            'ds_status' => 'Previsto'
+        ]);
+        DB::table('status_jogos')->insert([
+            'id' => 4,
+            'ds_status' => 'Aposta Encerrada'
+        ]);
     }
 }
