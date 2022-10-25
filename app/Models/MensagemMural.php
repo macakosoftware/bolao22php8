@@ -29,6 +29,6 @@ class MensagemMural extends Model
     
     public function usuario()
     {
-        return $this->hasOne('App\User', 'id', 'id_user');
+        return $this->hasOne(User::class, 'id', 'id_user');
     }    
 }
