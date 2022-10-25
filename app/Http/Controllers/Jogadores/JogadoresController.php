@@ -135,7 +135,7 @@ class JogadoresController extends LogadoController
             
             $jogador = new Jogador();
             $jogador->id = $nr_id;
-            $jogador->id_selecao = trim($record['id_selecao']);
+            $jogador->id_selecao = intval(trim($record['id_selecao']));
             $jogador->ds_selecao = trim($record['selecao']);
             $jogador->ds_numero = trim($record['numero']);
             $jogador->ds_nome = trim($record['nome']);
