@@ -27,19 +27,6 @@ class GeraReciboPalpites
 
         $this->ds_arquivo = $this::DIRETORIO_TMP.'/'.date('Y-m-d').'_'.date('H:i:s').'_recibo_palpites.pdf';
         
-        //############ Patch Imagens ################################
-        $contxt = stream_context_create([
-            'ssl' => [
-                'verify_peer' => FALSE,
-                'verify_peer_name' => FALSE,
-                'allow_self_signed' => TRUE,
-            ]
-        ]);
-
-        $this->pdf = PDF::setOptions(['isHTML5ParserEnabled' => true, 'isRemoteEnabled' => true]);
-        $this->pdf->getDomPDF()->setHttpContext($contxt);
-        //#################################################################################
-
-        $this->pdf->loadView('domPdf.reciboPalpites');
+        $this->pdf = PDF::loadView('domPdf.reciboPalpites');
     }
 }
