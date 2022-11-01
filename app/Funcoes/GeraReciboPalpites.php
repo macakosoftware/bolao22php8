@@ -23,7 +23,12 @@ class GeraReciboPalpites
     
     public function gerar(){   
         
-        view()->share('tb_saida',$this->tb_saida);
+        view()->share('tb_saida',$this->tb_saida);        
+        $path = asset('assets/images/copa_brothers_18_logo.png');
+        $type = pathinfo($path, PATHINFO_EXTENSION);
+        $data = file_get_contents($path);
+        $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
+        view()->share('img_logo',$base64);
 
         $this->ds_arquivo = $this::DIRETORIO_TMP.'/'.date('Y-m-d').'_'.date('H:i:s').'_recibo_palpites.pdf';
         

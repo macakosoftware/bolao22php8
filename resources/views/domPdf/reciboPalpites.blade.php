@@ -13,7 +13,7 @@
     margin:0;padding:0;
 } 
 body {
- background-image: url('http://bolao22.macakosoftware.website/images/recibo_palpites.png');
+ background-image: url({{asset('images/recibo_palpites.png')}});
  background-position: top left;
  background-repeat: no-repeat;
  background-size: 100%;
@@ -46,7 +46,7 @@ TD{font-family: helvetica; font-size: 8pt;}
 <body>
 <table border="0" width="100%">
 <tr>
-	<td width="20%"><img src="http://bolao22.macakosoftware.website/imagescopa_brothers_22_logo.png" width="86" height="118"/></td>
+	<td width="20%"><img src="{{$img_logo}}" width="86" height="118"/></td>
 	<td width="80%">
 		<h1>{{config('app.name')}}</h1>
 		<i>PALPITES ENCERRADOS</i>
