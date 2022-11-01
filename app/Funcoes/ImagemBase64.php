@@ -2,7 +2,7 @@
 
 namespace App\Funcoes;
 
-class ImageBase64
+class ImagemBase64
 {
      /**
      * Create a new controller instance.
