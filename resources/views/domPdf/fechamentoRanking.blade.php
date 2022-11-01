@@ -13,7 +13,7 @@
     margin:0;padding:0;
 } 
 body {
- background-image: url({{asset('images/background_folha_caderno4.jpg')}});
+ background-image: url("{{\App\Funcoes\ImagemBase64::converter('images/background_folha_caderno4.jpg')}}");
  background-position: top left;
  background-repeat: no-repeat;
  background-size: 80%;
@@ -46,7 +46,7 @@ TD{font-family: helvetica; font-size: 8pt;}
 <body>
 <table border=0 width="100%">
 <tr>
-	<td width="20%"><img src="{{asset('assets/images/copa_brothers_18_logo.png')}}" width="86" height="118"/></td>
+	<td width="20%"><img src="{{\App\Funcoes\ImagemBase64::converter('assets/images/copa_brothers_22_logo.png')}}" width="86" height="118"/></td>
 	<td width="80%">
 		<h1>{{config('app.name')}}</h1>
 		<div class="titulo">Fechamento do Ranking {{$tipoRanking->ds_nome}}</div>
@@ -61,7 +61,7 @@ TD{font-family: helvetica; font-size: 8pt;}
 <tr>
 	<td width="30%"></td>
 	<td width="40%" align="center">		
-		<img src="{{asset('images/badges/'.$ds_badge)}}"/>
+		<img src="{{\App\Funcoes\ImagemBase64::converter(''images/badges/'.$ds_badge)}}"/>
 	</td>	
 	<td width="30%"></td>
 </tr>
@@ -101,7 +101,7 @@ TD{font-family: helvetica; font-size: 8pt;}
   			@if (\App\Funcoes\VerificaAvatar::verificar($ranking['id_user']))
 			<img width="25px" height="25px" src="data:image/png;base64,{{ base64_encode(Storage::get('avatars/'.$ranking['id_user']))}}" alt="Photo" />
 			@else
-			<img width="25px" height="25px" src="{{ asset('assets/images/avatars/user.jpg') }}" alt="Photo" />
+			<img width="25px" height="25px" src="{{ \App\Funcoes\ImagemBase64::converter('assets/images/avatars/user.jpg') }}" alt="Photo" />
 			@endif
   			</div>
   			<div>

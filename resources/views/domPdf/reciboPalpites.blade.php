@@ -46,7 +46,7 @@ TD{font-family: helvetica; font-size: 8pt;}
 <body>
 <table border="0" width="100%">
 <tr>
-	<td width="20%"><img src="{{\App\Funcoes\ImagemBase64::converter('assets/images/copa_brothers_18_logo.png')}}" width="86" height="118"/></td>
+	<td width="20%"><img src="{{\App\Funcoes\ImagemBase64::converter('/images/copa_brothers_22_logo.png')}}" width="86" height="118"/></td>
 	<td width="80%">
 		<h1>{{config('app.name')}}</h1>
 		<i>PALPITES ENCERRADOS</i>
