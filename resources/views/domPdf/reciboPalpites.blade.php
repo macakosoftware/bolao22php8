@@ -13,7 +13,7 @@
     margin:0;padding:0;
 } 
 body {
- background-image: url({{asset('images/recibo_palpites.png')}});
+ background-image: url('http://bolao22.macakosoftware.website/images/recibo_palpites.png');
  background-position: top left;
  background-repeat: no-repeat;
  background-size: 100%;
