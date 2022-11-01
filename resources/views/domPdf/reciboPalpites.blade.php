@@ -13,7 +13,7 @@
     margin:0;padding:0;
 } 
 body {
- background-image: url("{{\App\Funcoes\ImageBase64::converter('images/recibo_palpites.png')}}");
+ background-image: url("{{\App\Funcoes\ImagemBase64::converter('images/recibo_palpites.png')}}");
  background-position: top left;
  background-repeat: no-repeat;
  background-size: 100%;
@@ -46,7 +46,7 @@ TD{font-family: helvetica; font-size: 8pt;}
 <body>
 <table border="0" width="100%">
 <tr>
-	<td width="20%"><img src="{{\App\Funcoes\ImageBase64::converter('assets/images/copa_brothers_18_logo.png')}}" width="86" height="118"/></td>
+	<td width="20%"><img src="{{\App\Funcoes\ImagemBase64::converter('assets/images/copa_brothers_18_logo.png')}}" width="86" height="118"/></td>
 	<td width="80%">
 		<h1>{{config('app.name')}}</h1>
 		<i>PALPITES ENCERRADOS</i>
@@ -74,7 +74,7 @@ TD{font-family: helvetica; font-size: 8pt;}
    <tr>
    	<td>{{$reg_aposta['aposta']->usuario->name}}</td>
    	<td align="left">
-   	<img src="{{ \App\Funcoes\ImageBase64::converter('images/brasoes') }}/{{$reg_aposta['aposta']->jogo->selecao1->ds_icone}}" />
+   	<img src="{{ \App\Funcoes\ImagemBase64::converter('images/brasoes') }}/{{$reg_aposta['aposta']->jogo->selecao1->ds_icone}}" />
    	{{$reg_aposta['aposta']->jogo->selecao1->ds_nome}}
    	@if ($reg_aposta['aposta']->id_selecao_penal == $reg_aposta['aposta']->jogo->id_selecao1)
    	(*) Penalty
@@ -84,7 +84,7 @@ TD{font-family: helvetica; font-size: 8pt;}
    	<td align="left">X</td>
    	<td align="center">{{$reg_aposta['aposta']->qt_gols_selecao2}}</td>
    	<td align="left">
-   	<img src="{{ \App\Funcoes\ImageBase64::converter('images/brasoes') }}/{{$reg_aposta['aposta']->jogo->selecao2->ds_icone}}" />
+   	<img src="{{ \App\Funcoes\ImagemBase64::converter('images/brasoes') }}/{{$reg_aposta['aposta']->jogo->selecao2->ds_icone}}" />
    	{{$reg_aposta['aposta']->jogo->selecao2->ds_nome}}
    	@if ($reg_aposta['aposta']->id_selecao_penal == $reg_aposta['aposta']->jogo->id_selecao2)
    	(*) Penalty
