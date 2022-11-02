@@ -16,7 +16,7 @@ body {
  background-image: url("{{\App\Funcoes\ImagemBase64::converter('images/background_folha_caderno4.jpg')}}");
  background-position: top left;
  background-repeat: no-repeat;
- background-size: 80%;
+ background-size: 100%;
  overflow: none;
  display: block; 
  font-family: helvetica;  
