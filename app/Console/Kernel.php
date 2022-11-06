@@ -32,7 +32,7 @@ class Kernel extends ConsoleKernel
         // $schedule->command('inspire')->hourly();
         //$schedule->command('pontosxp:creditodiario')->dailyAt('06:00')->appendOutputTo(env('ARQ_LOG','/var/log/bolao18.log'));
         $schedule->command('pontosxp:creditodiario')->everyMinute()->appendOutputTo(env('ARQ_LOG','/var/log/bolao18.log'));
-        $schedule->command('jogos:travajogo')->everyFifteenMinutes()->appendOutputTo('var/log/cron_trava_jogo.log');
+        $schedule->command('jogos:travajogo')->everyFifteenMinutes()->appendOutputTo('/var/log/cron_trava_jogo.log');
         $schedule->command('apostas:lembrete')->everyFifteenMinutes();
         $schedule->command('apostas:enviarAviso')->everyFifteenMinutes();
         $schedule->command('figurinhas:apagarNotificacao')->everyMinute()->appendOutputTo('/var/log/cron_notificacao.log');
