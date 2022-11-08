@@ -28,20 +28,20 @@ class DatabaseSeeder extends Seeder
     {
         
         $this->call([
-            //PerfisTableSeeder::class,
-            //PagamentosTableSeeder::class,
-            //UsersTableSeeder::class,
-            //EstadiosTableSeeder::class,
-            //GruposTableSeeder::class,
-            //HandcapsTableSeeder::class,                       
-            //SelecoesTableSeeder::class,            
-            //StatusJogosTableSeeder::class,
-            //StatusRankingsTableSeeder::class,
-            //TiposRankingsTableSeeder::class,
-            //PlacaresTableSeeder::class,
-            //PlacaresPontosTableSeeder::class,
-            //PosicoesTableSeeder::class,
-            //FormaPagamentoSeeder::class
+            PerfisTableSeeder::class,
+            PagamentosTableSeeder::class,
+            UsersTableSeeder::class,
+            EstadiosTableSeeder::class,
+            GruposTableSeeder::class,
+            HandcapsTableSeeder::class,                       
+            SelecoesTableSeeder::class,            
+            StatusJogosTableSeeder::class,
+            StatusRankingsTableSeeder::class,
+            TiposRankingsTableSeeder::class,
+            PlacaresTableSeeder::class,
+            PlacaresPontosTableSeeder::class,
+            PosicoesTableSeeder::class,
+            FormaPagamentoSeeder::class,
             JogadoresTableSeeder::class,
         ]);
     }
