@@ -53,7 +53,7 @@
                             @endif
 							
 							<div class="col-xs-12">
-								<h1 class="header smaller lighter blue"><img src="{{asset('images/federacoes')}}/{{$selecao->ds_icone}}"/>{{$selecao->ds_nome}}
+								<h1 class="header smaller lighter blue"><img src="{{asset('images/federacoes')}}/{{$selecao->ds_icone}}" width="100px" height="100px"/>{{$selecao->ds_nome}}
 								@if (env('TIPO_BOLAO') == 'WC')<small>{{$selecao->grupo->ds_grupo}}</small> @endif
 								</h3>
 							</div>

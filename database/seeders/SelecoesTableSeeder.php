@@ -59,9 +59,9 @@ class SelecoesTableSeeder extends Seeder
             'ds_icone' => 'inglaterra.png',
             'id_grupo' => 2,
             'cd_handcap' => 2,
-        		'ds_cor' => '',
+        		'ds_cor' => 'branca',
         		'ds_fonte' => '',
-        		'ds_cor2' => ''
+        		'ds_cor2' => '#0000FF'
         ]);
         DB::table('selecoes')->insert([
             'id' => 6,
@@ -69,9 +69,9 @@ class SelecoesTableSeeder extends Seeder
             'ds_icone' => 'ira.png',
             'id_grupo' => 2,
             'cd_handcap' => 10,
-        		'ds_cor' => '',
+        		'ds_cor' => 'branca',
         		'ds_fonte' => '',
-        		'ds_cor2' => ''
+        		'ds_cor2' => '#FF0000'
         ]);
         DB::table('selecoes')->insert([
             'id' => 7,
@@ -79,9 +79,9 @@ class SelecoesTableSeeder extends Seeder
             'ds_icone' => 'eua.png',
             'id_grupo' => 2,
             'cd_handcap' => 6,
-        		'ds_cor' => '',
+        		'ds_cor' => 'branca',
         		'ds_fonte' => '',
-        		'ds_cor2' => ''
+        		'ds_cor2' => '#0000CD'
         ]);
         DB::table('selecoes')->insert([
             'id' => 8,
@@ -89,9 +89,9 @@ class SelecoesTableSeeder extends Seeder
             'ds_icone' => 'gales.png',
             'id_grupo' => 2,
             'cd_handcap' => 8,
-        		'ds_cor' => '',
+        		'ds_cor' => 'vermelha',
         		'ds_fonte' => '',
-        		'ds_cor2' => ''
+        		'ds_cor2' => '#ffffff'
         ]);
         DB::table('selecoes')->insert([
             'id' => 9,
@@ -99,9 +99,9 @@ class SelecoesTableSeeder extends Seeder
             'ds_icone' => 'argentina.png',
             'id_grupo' => 3,
             'cd_handcap' => 3,
-        		'ds_cor' => '',
+        		'ds_cor' => 'argentina',
         		'ds_fonte' => '',
-        		'ds_cor2' => ''
+        		'ds_cor2' => '#000000'
         ]);
         DB::table('selecoes')->insert([
             'id' => 10,
@@ -109,9 +109,9 @@ class SelecoesTableSeeder extends Seeder
             'ds_icone' => 'arabia_saudita.png',
             'id_grupo' => 3,
             'cd_handcap' => 10,
-        		'ds_cor' => '',
+        		'ds_cor' => 'verde',
         		'ds_fonte' => '',
-        		'ds_cor2' => ''
+        		'ds_cor2' => '#ffffff'
         ]);
         DB::table('selecoes')->insert([
             'id' => 11,
@@ -119,9 +119,9 @@ class SelecoesTableSeeder extends Seeder
             'ds_icone' => 'mexico.png',
             'id_grupo' => 3,
             'cd_handcap' => 7,
-        		'ds_cor' => '',
+        		'ds_cor' => 'verde',
         		'ds_fonte' => '',
-        		'ds_cor2' => ''
+        		'ds_cor2' => '#ffffff'
         ]);
         DB::table('selecoes')->insert([
             'id' => 12,
@@ -129,9 +129,9 @@ class SelecoesTableSeeder extends Seeder
             'ds_icone' => 'polonia.png',
             'id_grupo' => 3,
             'cd_handcap' => 6,
-        		'ds_cor' => '',
+        		'ds_cor' => 'vermelha',
         		'ds_fonte' => '',
-        		'ds_cor2' => ''
+        		'ds_cor2' => '#ffffff'
         ]);
         DB::table('selecoes')->insert([
             'id' => 13,
@@ -139,9 +139,9 @@ class SelecoesTableSeeder extends Seeder
             'ds_icone' => 'franca.png',
             'id_grupo' => 4,
             'cd_handcap' => 1,
-        		'ds_cor' => '',
+        		'ds_cor' => 'japao',
         		'ds_fonte' => '',
-        		'ds_cor2' => ''
+        		'ds_cor2' => '#ffffff'
         ]);
         DB::table('selecoes')->insert([
             'id' => 14,
@@ -149,9 +149,9 @@ class SelecoesTableSeeder extends Seeder
             'ds_icone' => 'australia.png',
             'id_grupo' => 4,
             'cd_handcap' => 10,
-        		'ds_cor' => '',
+        		'ds_cor' => 'australia',
         		'ds_fonte' => '',
-        		'ds_cor2' => ''
+        		'ds_cor2' => '#228B22'
         ]);
         DB::table('selecoes')->insert([
             'id' => 15,
@@ -159,9 +159,9 @@ class SelecoesTableSeeder extends Seeder
             'ds_icone' => 'dinamarca.png',
             'id_grupo' => 4,
             'cd_handcap' => 5,
-        		'ds_cor' => '',
+        		'ds_cor' => 'vermelha',
         		'ds_fonte' => '',
-        		'ds_cor2' => ''
+        		'ds_cor2' => '#ffffff'
         ]);
         DB::table('selecoes')->insert([
             'id' => 16,
@@ -169,9 +169,9 @@ class SelecoesTableSeeder extends Seeder
             'ds_icone' => 'tunisia.png',
             'id_grupo' => 4,
             'cd_handcap' => 9,
-        		'ds_cor' => '',
+        		'ds_cor' => 'vermelha',
         		'ds_fonte' => '',
-        		'ds_cor2' => ''
+        		'ds_cor2' => '#ffffff'
         ]);
         DB::table('selecoes')->insert([
             'id' => 17,
@@ -179,9 +179,9 @@ class SelecoesTableSeeder extends Seeder
             'ds_icone' => 'espanha.png',
             'id_grupo' => 5,
             'cd_handcap' => 2,
-        		'ds_cor' => '',
+        		'ds_cor' => 'vermelha',
         		'ds_fonte' => '',
-        		'ds_cor2' => ''
+        		'ds_cor2' => '#FFBF00'
         ]);
         DB::table('selecoes')->insert([
             'id' => 18,
@@ -189,9 +189,9 @@ class SelecoesTableSeeder extends Seeder
             'ds_icone' => 'costa_rica.png',
             'id_grupo' => 5,
             'cd_handcap' => 10,
-        		'ds_cor' => '',
+        		'ds_cor' => 'vermelha',
         		'ds_fonte' => '',
-        		'ds_cor2' => ''
+        		'ds_cor2' => '#ffffff'
         ]);
         DB::table('selecoes')->insert([
             'id' => 19,
@@ -199,9 +199,9 @@ class SelecoesTableSeeder extends Seeder
             'ds_icone' => 'alemanha.png',
             'id_grupo' => 5,
             'cd_handcap' => 3,
-        		'ds_cor' => '',
+        		'ds_cor' => 'branca',
         		'ds_fonte' => '',
-        		'ds_cor2' => ''
+        		'ds_cor2' => '#000000'
         ]);
         DB::table('selecoes')->insert([
             'id' => 20,
@@ -209,9 +209,9 @@ class SelecoesTableSeeder extends Seeder
             'ds_icone' => 'japao.png',
             'id_grupo' => 5,
             'cd_handcap' => 9,
-        		'ds_cor' => '',
+        		'ds_cor' => 'japao',
         		'ds_fonte' => '',
-        		'ds_cor2' => ''
+        		'ds_cor2' => '#ffffff'
         ]);
         DB::table('selecoes')->insert([
             'id' => 21,
@@ -219,9 +219,9 @@ class SelecoesTableSeeder extends Seeder
             'ds_icone' => 'belgica.png',
             'id_grupo' => 6,
             'cd_handcap' => 3,
-        		'ds_cor' => '',
+        		'ds_cor' => 'vermelha',
         		'ds_fonte' => '',
-        		'ds_cor2' => ''
+        		'ds_cor2' => '#FFEA00'
         ]);
         DB::table('selecoes')->insert([
             'id' => 22,
@@ -229,9 +229,9 @@ class SelecoesTableSeeder extends Seeder
             'ds_icone' => 'canada.png',
             'id_grupo' => 6,
             'cd_handcap' => 9,
-        		'ds_cor' => '',
+        		'ds_cor' => 'vermelha',
         		'ds_fonte' => '',
-        		'ds_cor2' => ''
+        		'ds_cor2' => '#ffffff'
         ]);
         DB::table('selecoes')->insert([
             'id' => 23,
@@ -239,9 +239,9 @@ class SelecoesTableSeeder extends Seeder
             'ds_icone' => 'marrocos.png',
             'id_grupo' => 6,
             'cd_handcap' => 8,
-        		'ds_cor' => '',
+        		'ds_cor' => 'vermelha',
         		'ds_fonte' => '',
-        		'ds_cor2' => ''
+        		'ds_cor2' => '#008000'
         ]);
         DB::table('selecoes')->insert([
             'id' => 24,
@@ -249,9 +249,9 @@ class SelecoesTableSeeder extends Seeder
             'ds_icone' => 'croacia.png',
             'id_grupo' => 6,
             'cd_handcap' => 5,
-        		'ds_cor' => '',
+        		'ds_cor' => 'croacia',
         		'ds_fonte' => '',
-        		'ds_cor2' => ''
+        		'ds_cor2' => '#0000FF'
         ]);
         DB::table('selecoes')->insert([
             'id' => 25,
@@ -259,9 +259,9 @@ class SelecoesTableSeeder extends Seeder
             'ds_icone' => 'brasil.png',
             'id_grupo' => 7,
             'cd_handcap' => 1,
-        		'ds_cor' => '',
+        		'ds_cor' => 'amarela',
         		'ds_fonte' => '',
-        		'ds_cor2' => ''
+        		'ds_cor2' => '#008000'
         ]);
         DB::table('selecoes')->insert([
             'id' => 26,
@@ -269,9 +269,9 @@ class SelecoesTableSeeder extends Seeder
             'ds_icone' => 'servia.png',
             'id_grupo' => 7,
             'cd_handcap' => 7,
-        		'ds_cor' => '',
+        		'ds_cor' => 'branca',
         		'ds_fonte' => '',
-        		'ds_cor2' => ''
+        		'ds_cor2' => '#FF0000'
         ]);
         DB::table('selecoes')->insert([
             'id' => 27,
@@ -279,9 +279,9 @@ class SelecoesTableSeeder extends Seeder
             'ds_icone' => 'suica.png',
             'id_grupo' => 7,
             'cd_handcap' => 7,
-        		'ds_cor' => '',
+        		'ds_cor' => 'vermelha',
         		'ds_fonte' => '',
-        		'ds_cor2' => ''
+        		'ds_cor2' => '#ffffff'
         ]);
         DB::table('selecoes')->insert([
             'id' => 28,
@@ -289,9 +289,9 @@ class SelecoesTableSeeder extends Seeder
             'ds_icone' => 'camaroes.png',
             'id_grupo' => 7,
             'cd_handcap' => 8,
-        		'ds_cor' => '',
+        		'ds_cor' => 'verde',
         		'ds_fonte' => '',
-        		'ds_cor2' => ''
+        		'ds_cor2' => '#FFFF00'
         ]);
         DB::table('selecoes')->insert([
             'id' => 29,
@@ -299,9 +299,9 @@ class SelecoesTableSeeder extends Seeder
             'ds_icone' => 'portugal.png',
             'id_grupo' => 8,
             'cd_handcap' => 4,
-        		'ds_cor' => '',
+        		'ds_cor' => 'vermelha',
         		'ds_fonte' => '',
-        		'ds_cor2' => ''
+        		'ds_cor2' => '#8B8000'
         ]);
         DB::table('selecoes')->insert([
             'id' => 30,
@@ -309,9 +309,9 @@ class SelecoesTableSeeder extends Seeder
             'ds_icone' => 'gana.png',
             'id_grupo' => 8,
             'cd_handcap' => 8,
-        		'ds_cor' => '',
+        		'ds_cor' => 'branca',
         		'ds_fonte' => '',
-        		'ds_cor2' => ''
+        		'ds_cor2' => '#000000'
         ]);
         DB::table('selecoes')->insert([
             'id' => 31,
@@ -319,9 +319,9 @@ class SelecoesTableSeeder extends Seeder
             'ds_icone' => 'uruguai.png',
             'id_grupo' => 8,
             'cd_handcap' => 5,
-        		'ds_cor' => '',
+        		'ds_cor' => 'azul',
         		'ds_fonte' => '',
-        		'ds_cor2' => ''
+        		'ds_cor2' => '#ffffff'
         ]);
         DB::table('selecoes')->insert([
             'id' => 32,
@@ -329,9 +329,9 @@ class SelecoesTableSeeder extends Seeder
             'ds_icone' => 'coreia_do_sul.png',
             'id_grupo' => 8,
             'cd_handcap' => 10,
-        		'ds_cor' => '',
+        		'ds_cor' => 'vermelha',
         		'ds_fonte' => '',
-        		'ds_cor2' => ''
+        		'ds_cor2' => '#000000'
         ]);
         DB::table('selecoes')->insert([
             'id' => 33,
