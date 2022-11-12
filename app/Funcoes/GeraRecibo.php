@@ -42,7 +42,7 @@ class GeraRecibo
         $pdf->Cell(10,10,'Email: '.$usuario->email,0,'L');
         $pdf->ln(10);
         $pdf->SetXY(10, 120);
-        $pdf->MultiCell(185,5,utf8_decode('Confirmamos o pagamento de sua Joia Premio no valor de R$30,00 (trinta reais) e sua participação no Bolão Copa Brothers 2018. Segue abaixo os detalhes do seu pagamento:'),0,'J');
+        $pdf->MultiCell(185,5,utf8_decode('Confirmamos o pagamento de sua Joia Premio no valor de R$35,00 (trinta reais) e sua participação no Bolão Copa Brothers 2022. Segue abaixo os detalhes do seu pagamento:'),0,'J');
         $pdf->ln(10);
         
         $w = [50, 70, 70];
