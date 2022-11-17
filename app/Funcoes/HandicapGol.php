@@ -65,6 +65,7 @@ class HandicapGol
         ->where('nr_dif_final','>=',$dif)
         ->with('placar')
         ->get();
+
         
         foreach($placaresPonto as $placarPonto){
             $placar = $placarPonto->placar->ds_placar;

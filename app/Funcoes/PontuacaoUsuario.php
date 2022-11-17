@@ -103,7 +103,7 @@ class PontuacaoUsuario
                     if ($calculo->qt_pontos_placar_parcial1 > $calculo->qt_pontos_placar_parcial2){
                         $this->qt_total_placar_parcial += $calculo->qt_pontos_placar_parcial1;
                     }
-                    else{
+                    else{                                                
                         $this->qt_total_placar_parcial += $calculo->qt_pontos_placar_parcial2;
                     }
                 }
@@ -143,6 +143,8 @@ class PontuacaoUsuario
             $this->qt_pontos_resultado = 0;
             $this->qt_pontos_placar_cheio = 0;
             $this->qt_pontos_placar_parcial = 0;
+            $this->qt_pontos_placar_parcial1 = 0;
+            $this->qt_pontos_placar_parcial2 = 0;
             $this->qt_pontos_bonus = 0;
             if ($qt_aposta_selecao1 == $qt_aposta_selecao2){
                 $this->qt_pontos_resultado = $aposta->jogo->nr_pontos_handcapX;
