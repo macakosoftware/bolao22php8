@@ -75,8 +75,7 @@ class TravaJogo extends Command
         
         if (isset($tb_jogos)){
             
-        	/*
-            $jogosTrava = Jogo::whereIn('id',$tb_jogos)
+        	$jogosTrava = Jogo::whereIn('id',$tb_jogos)
             ->with('selecao1')
             ->with('selecao2')
             ->get();
@@ -98,8 +97,7 @@ class TravaJogo extends Command
                         }
                     }
                 }
-            }
-            */
+            }            
             
             echo 'Enviando Emails de Apostas Finalizadas '.PHP_EOL;
             $users = User::all();            
