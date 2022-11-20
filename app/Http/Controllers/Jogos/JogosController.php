@@ -439,9 +439,38 @@ class JogosController extends LogadoController
         ->orderBy('dt_jogo', 'asc')
         ->orderBy('hr_jogo', 'asc')
         ->get();
+
+        if (count($jogos) == 0){
+            return redirect('home')->with('erro', 'Nenhum jogo com aposta encerrada!');
+        }
         
         foreach($jogos as $jogo){
             $tb_jogos[] = $jogo->id;
+        }
+
+        if (isset($tb_jogos)){            
+        	$jogosTrava = Jogo::whereIn('id',$tb_jogos)
+            ->with('selecao1')
+            ->with('selecao2')
+            ->get();
+            if (count($jogosTrava) > 0){
+                foreach($jogosTrava as $jogoTrava){
+                    $usersTrava = User::all();
+                    foreach($usersTrava as $userTrava){
+                        $aposta = Aposta::where('id_jogo',$jogoTrava->id)
+                        ->where('id_user',$userTrava->id)
+                        ->first();
+                        if ($aposta == null){
+                            $aposta10 = new Aposta();
+                            $aposta10->id_jogo = $jogoTrava->id;
+                            $aposta10->id_user = $userTrava->id;
+                            $aposta10->qt_gols_selecao1 = 10;
+                            $aposta10->qt_gols_selecao2 = 10;
+                            $aposta10->save();                            
+                        }
+                    }
+                }
+            }            
         }
 
         foreach($tb_jogos as $id_jogo){
