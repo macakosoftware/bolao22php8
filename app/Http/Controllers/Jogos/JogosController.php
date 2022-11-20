@@ -466,6 +466,7 @@ class JogosController extends LogadoController
                             $aposta10->id_user = $userTrava->id;
                             $aposta10->qt_gols_selecao1 = 10;
                             $aposta10->qt_gols_selecao2 = 10;
+                            $aposta10->id_selecao_penal = 0;
                             $aposta10->save();                            
                         }
                     }
