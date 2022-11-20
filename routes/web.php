@@ -87,6 +87,7 @@ Route::post('/jogos/resultados', [JogosController::class, 'resultados'])->name('
 //Route::get('/jogos/telaControleRanking', [JogosController::class, 'telaControleRanking'])->name('jogos.telaControleRanking');
 Route::post('/jogos/controleRanking', [JogosController::class, 'controleRanking'])->name('jogos.controleRanking');
 Route::post('/jogos/recalcular', [JogosController::class, 'recalcularHandcap'])->name('jogos.recalcular');
+Route::get('/jogos/telaReciboPalpites', [JogosController::class, 'telaReciboPalpites'])->name('jogos.telaPalpiteRecibos');
 
 // Seleções
 Route::get('/selecoes/telaManutencao', [SelecoesController::class, 'telaManutencao'])->name('selecoes.telaManutencao');

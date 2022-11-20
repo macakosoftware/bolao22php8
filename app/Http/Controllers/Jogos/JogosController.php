@@ -21,6 +21,9 @@ use App\Models\User;
 use App\Models\Ranking;
 use Telegram;
 use App\Events\NovoJogoEvent;
+use App\Funcoes\GeraReciboPalpites;
+use App\Funcoes\PontuacaoUsuario;
+use App\Models\Aposta;
 
 class JogosController extends LogadoController
 {
@@ -424,5 +427,54 @@ class JogosController extends LogadoController
         }
         
         return redirect('jogos/telaManutencaoLista')->with('sucesso', 'Handcaps recalculados com sucesso!');
+    }
+
+    public function telaReciboPalpites()
+    {  
+        $jogos = Jogo::where('cd_status', StatusJogo::JOGO_APOSTA_ENCERRADA)
+        ->with('selecao1')
+        ->with('selecao2')
+        ->with('estadio')
+        ->with('statusJogo')
+        ->orderBy('dt_jogo', 'asc')
+        ->orderBy('hr_jogo', 'asc')
+        ->get();
+        
+        foreach($jogos as $jogo){
+            $tb_jogos[] = $jogo->id;
+        }
+
+        foreach($tb_jogos as $id_jogo){
+            
+            $jogo = Jogo::where('id',$id_jogo)
+            ->with('selecao1')
+            ->with('selecao2')
+            ->first();
+            
+            $apostas = Aposta::where('id_jogo',$id_jogo)
+            ->with('usuario')
+            ->with('jogo')
+            ->get()
+            ->sortBy('usuario.name');
+            $tb_apostas = array();
+            foreach($apostas as $aposta){                
+                $pontuacao = new PontuacaoUsuario();
+                $pontuacao->calcularProgramadoJogo($aposta->id);
+                
+                $tb_apostas[] = array('aposta'=>$aposta,
+                                      'pontuacao'=>$pontuacao
+                                      );
+            }
+            
+            $tb_saida[] = array('id_jogo'=>$id_jogo,
+                'jogo'=>$jogo,
+                'tb_apostas'=>$tb_apostas
+            );
+        }
+        
+        $recibo = new GeraReciboPalpites($tb_saida);
+        $recibo->gerar();
+        $recibo->pdf->save($recibo->ds_arquivo);    
+        return response()->download($recibo->ds_arquivo, 'recibo.pdf', [], 'inline');
     }
 }

@@ -502,6 +502,15 @@
 
 								<b class="arrow"></b>
 							</li>
+
+							<li class="">
+								<a href="{{ url('jogos/telaReciboPalpites') }}">
+									<i class="menu-icon fa fa-search"></i>
+									Recibo Palpites
+								</a>
+
+								<b class="arrow"></b>
+							</li>
 							
 						</ul>
 					</li>
