@@ -27,6 +27,6 @@ class EnviaEmailApostasEditadasListener implements ShouldQueue
      */
     public function handle(ApostaAtualizadaEvent $event)
     {   
-        Mail::to($event->user)->send(new EmailApostasEditadas($event->user, $event->tb_apostas));
+        //Mail::to($event->user)->send(new EmailApostasEditadas($event->user, $event->tb_apostas));
     }
 }
