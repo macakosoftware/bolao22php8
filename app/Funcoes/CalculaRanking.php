@@ -57,11 +57,11 @@ class CalculaRanking
             	$rankingSimples = Ranking::where('cd_ranking',$fase->id_ranking_simples)
             	->with('tipoRanking')
             	->with('usuario')
-            	->orderBy('qt_pontos', 'asc')
-                ->orderBy('qt_acertos_cheio', 'asc')
-                ->orderBy('qt_acertos_parcial', 'asc')
-                ->orderBy('qt_acertos_resultado', 'asc')
-                ->orderBy('qt_pontos_maior', 'asc')
+            	->orderBy('qt_pontos', 'desc')
+                ->orderBy('qt_acertos_cheio', 'desc')
+                ->orderBy('qt_acertos_parcial', 'desc')
+                ->orderBy('qt_acertos_resultado', 'desc')
+                ->orderBy('qt_pontos_maior', 'desc')
             	->first();
             	
             	if ($rankingSimples->usuario->id == $this->id_usuario_campeao){        	    
