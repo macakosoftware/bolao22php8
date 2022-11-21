@@ -46,7 +46,7 @@ class TravaJogo extends Command
         
         echo 'Testando Travamento de Jogos as '.$corrente->format('d/m/Y H:i:s').PHP_EOL;
         
-        $limite = 60;
+        $limite = 30;
         
         $jogos = Jogo::where('cd_status',StatusJogo::JOGO_PROGRAMADO)
                  ->with('selecao1')
