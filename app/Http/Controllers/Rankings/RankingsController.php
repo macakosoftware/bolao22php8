@@ -56,11 +56,11 @@ class RankingsController extends LogadoController
         $rankings = Ranking::where('cd_ranking',$request->id_ranking)
                     ->with('tipoRanking')
                     ->with('usuario')
-                    ->orderBy('qt_pontos', 'asc')
-                    ->orderBy('qt_acertos_cheio', 'asc')
-                    ->orderBy('qt_acertos_parcial', 'asc')
-                    ->orderBy('qt_acertos_resultado', 'asc')
-                    ->orderBy('qt_pontos_maior', 'asc')
+                    ->orderBy('qt_pontos', 'desc')
+                    ->orderBy('qt_acertos_cheio', 'desc')
+                    ->orderBy('qt_acertos_parcial', 'desc')
+                    ->orderBy('qt_acertos_resultado', 'desc')
+                    ->orderBy('qt_pontos_maior', 'desc')
                     ->get();
         
         if (count($rankings) == 0){
