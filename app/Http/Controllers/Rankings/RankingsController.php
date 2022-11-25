@@ -160,12 +160,12 @@ class RankingsController extends LogadoController
     
     public function telaFiltroFechamento()
     {
-        $tiposRankings = TipoRanking::where('cd_status',StatusRanking::FECHADO)
+        $tiposRankings = TipoRanking::where('cd_status',StatusRanking::ABERTO)
                          ->orderBy('ds_nome')
                          ->get();
         
         if (count($tiposRankings) == 0){
-            return redirect('home')->with('erro', 'Não há nenhum ranking fechado ainda!');
+            return redirect('home')->with('erro', 'Não há nenhum ranking para ser fechado!');
         }
 
         $tb_rankings = array();                 
