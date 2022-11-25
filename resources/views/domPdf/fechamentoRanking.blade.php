@@ -61,7 +61,7 @@ TD{font-family: helvetica; font-size: 8pt;}
 <tr>
 	<td width="30%"></td>
 	<td width="40%" align="center">		
-		<img src="{{\App\Funcoes\ImagemBase64::converter(''images/badges/'.$ds_badge)}}"/>
+		<img src="{{\App\Funcoes\ImagemBase64::converter('images/badges/'.$ds_badge)}}"/>
 	</td>	
 	<td width="30%"></td>
 </tr>
