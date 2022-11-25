@@ -49,7 +49,7 @@ class GeraChequePremio
         $pdf->setSourceFile($path);
         $tplIdx = $pdf->importPage(1);        
         $pdf->useTemplate($tplIdx, 0, 0);
-        $pdf->SetFont('shark','',36);
+        $pdf->SetFont('arial','',36);
         $pdf->ln(100);
         $pdf->Cell(289,10,utf8_decode($this->premio->usuario->name), 0, 0, 'C');
         $pdf->ln(15);
@@ -57,10 +57,10 @@ class GeraChequePremio
         $pdf->ln(15);
         $pdf->Cell(289,10,utf8_decode('R$ '.number_format($this->premio->vl_premio, 2, ',', '.')), 0, 0, 'C');
         $pdf->SetXY(228,100);
-        $pdf->setFont('shark','',100);        
+        $pdf->setFont('arial','',100);        
         $pdf->Cell(44,6,utf8_decode($this->premio->nr_posicao.'º'),0,0,'C');
         $pdf->SetXY(225,120);
-        $pdf->setFont('shark','',40);
+        $pdf->setFont('arial','',40);
         $pdf->Cell(44,6,'lugar',0,0,'C');
         /*
         $pdf->ln(10);
