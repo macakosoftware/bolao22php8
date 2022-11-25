@@ -9,7 +9,8 @@ use Illuminate\Support\Facades\Storage;
 
 class GeraFechamentoRanking 
 {
-    private const PATH_TMP      = '/var';
+    private const PATH_PODIUM      = '/var/www/public/images';
+    private const DIRETORIO_PODIUM = '/images';
     private const DIRETORIO_TMP = '/tmp';    
     private const IMAGEM_PODIUM = "/images/podium.png";
     //private const GOLDEN_MEDAL = "/images/golden_medal.png";
@@ -98,8 +99,9 @@ class GeraFechamentoRanking
         $image->insert($img_silver, 'top-left',87, 147);
         $image->insert($img_golden, 'top-left',262, 74);
         $image->insert($img_bronze, 'top-left',457, 189);        
-        $this->ds_arq_podium = $this::DIRETORIO_TMP.'/podium_'.$this->cd_ranking.".png";
+        $this->ds_arq_podium = $this::PATH_PODIUM.'/podium_'.$this->cd_ranking.".png";        
         $image->save($this->ds_arq_podium);
+        $this->ds_arq_podium = $this::DIRETORIO_PODIUM.'/podium_'.$this->cd_ranking.".png";
                 
         view()->share('usuario_campeao', $usuario_campeao);        
         view()->share('ds_arq_podium',$this->ds_arq_podium);
