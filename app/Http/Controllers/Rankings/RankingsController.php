@@ -189,6 +189,10 @@ class RankingsController extends LogadoController
             ->withInput();
         }
         
+        $ranking = TipoRanking::whereId($request->cd_ranking)->get();
+        $ranking->cd_status = StatusRanking::FECHADO;
+        $ranking->save();
+
         $badge = new GeraBadge($request->cd_ranking);
         $badge->gerar();
         
