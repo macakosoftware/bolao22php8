@@ -34,7 +34,7 @@ class GeraChequePremio
                 
         $pdf = new \setasign\Fpdi\Fpdi('L','mm','A4');
         $pdf->SetMargins(1,1,1);
-        $pdf->AddFont('shark','','SRF2.php');
+        //$pdf->AddFont('shark','','SRF2.php');
         $pdf->AddPage('L');
         $path = '';
         if ($this->premio->nr_posicao == 1){
