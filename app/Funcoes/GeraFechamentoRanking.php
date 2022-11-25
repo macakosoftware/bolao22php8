@@ -9,7 +9,8 @@ use Illuminate\Support\Facades\Storage;
 
 class GeraFechamentoRanking 
 {
-    private const DIRETORIO_TMP ='/images';
+    private const PATH_TMP      = '/var';
+    private const DIRETORIO_TMP = '/tmp';    
     private const IMAGEM_PODIUM = "/images/podium.png";
     //private const GOLDEN_MEDAL = "/images/golden_medal.png";
     //private const SILVER_MEDAL = "/images/silver_medal.png";
