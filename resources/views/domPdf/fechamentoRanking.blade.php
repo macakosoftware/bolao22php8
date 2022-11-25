@@ -16,7 +16,7 @@ body {
  background-image: url("{{\App\Funcoes\ImagemBase64::converter('images/background_folha_caderno4.jpg')}}");
  background-position: top left;
  background-repeat: no-repeat;
- background-size: 80%;
+ background-size: 100%;
  overflow: none;
  display: block; 
  font-family: helvetica;  
@@ -72,7 +72,7 @@ TD{font-family: helvetica; font-size: 8pt;}
 <tr>
 <td width="20%">&nbsp;</td>
 <td width="80%" align="left">
-	<img src="{{$ds_arq_podium}}" />
+	<img src="{{\App\Funcoes\ImagemBase64::converter($ds_arq_podium)}}" />
 </td>
 <td width="20%">&nbsp;</td>
 </tr>
