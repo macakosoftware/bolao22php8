@@ -248,6 +248,11 @@ class JogosController extends LogadoController
         }
         
         $dt_jogo = Carbon::createFromFormat('d/m/Y',$request->dt_jogo)->format('Y-m-d');
+
+        $tipoRanking = TipoRanking::where('id',$request->id_ranking)->first();
+
+        $handicap = new HandicapJogo($tipoRanking->id_handicap_casa);
+        $handicap->calcular($request->id_selecao1, $request->id_selecao2);
        
         $jogo = Jogo::where('id', $request->id_jogo)->first();
         $jogo->id_selecao1 = $request->id_selecao1;
@@ -257,6 +262,9 @@ class JogosController extends LogadoController
         $jogo->id_estadio = $request->id_estadio;
         $jogo->cd_status = StatusJogo::JOGO_PROGRAMADO;
         $jogo->cd_ranking = $request->id_ranking;
+        $jogo->nr_pontos_handcap1 = $handicap->nr_pontos_handcap1;
+        $jogo->nr_pontos_handcapX = $handicap->nr_pontos_handcapX;
+        $jogo->nr_pontos_handcap2 = $handicap->nr_pontos_handcap2;
         if ($request->id_descricao == true){
             $jogo->ds_selecao1 = $request->desc1;
             $jogo->ds_selecao2 = $request->desc2;
