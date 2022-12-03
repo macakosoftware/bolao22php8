@@ -263,6 +263,9 @@
 												<li>
 													6.6 Partidas Eliminatórias onde o participante realizar um palpite de empate e acertar o vencedor da disputa de pênaltis receberá uma pontuação bônus de 2 (dois) pontos.
 												</li>
+												<li>
+													6.7 Partidas Eliminatórias serão computadas os 120 minutos de partida (quando houver prorrogação) para fins de venedor e placar final do jogo. Caso o jogo não vá para prorrogação valerá os 90 minutos. No caso de empate vale o item 6.6 para premiação do vencedor dos penalties para quem jogar empate no resultado.
+												</li>
 											</ul>
 											<h2>7. RANKING</h2>
 											<ul>
